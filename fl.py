@@ -2,7 +2,6 @@ from flask import Flask
 from flask import request
 import subprocess
 import magic
-#import json
 
 import Reg_Auth
 import model
@@ -69,27 +68,6 @@ def convert_ogg_to_wav_16k(data: bytes, ogg=True) -> bytes:
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
-
-# @app.route("/path_1/<param>", methods=['GET','POST'])
-# def path_1(param):
-#     print(f"{param} here")
-#     print(request.form)
-#     print(request.args)
-#     return '0'
-
-# @app.route("/register", methods=["POST"])
-# def register():
-#     print(request.form)
-#     print(request.args)
-#     body = request.data
-#     print('body: ', body)
-#     j_body = json.loads(body)
-#     login = j_body["login"]
-#     password = j_body["password"]
-#     reg.registr(login, password)
-#     token = reg.auth(login, password)
-#     j_ans = {"token" : token}
-#     return json.dumps(j_ans)
 
 @app.route("/audiototext", methods=["POST"])
 def audiototext():
