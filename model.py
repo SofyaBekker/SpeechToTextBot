@@ -82,8 +82,4 @@ class WhisperRussian():
             result += ars['text']
         
         return result
-        
-# #ans = whisp.file_to_text(path)
-# ans = whisp.bytes_to_text(data_bytes)
 
-# print(ans) 
