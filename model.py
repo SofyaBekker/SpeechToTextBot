@@ -1,4 +1,3 @@
-#import torch
 import torchaudio        
 import subprocess
 from io import BytesIO
@@ -49,21 +48,6 @@ class WhisperRussian():
 
         print("Configuring done!")
         logger.info("Configuring done!")
-        
-    # def file_to_text(self, file_path):
-        
-    #     new_file_path = 'E:\\PProject\\tests\\audio1.wav'
-    #     subprocess.call(["ffmpeg", "-i", file_path, "-ar", "16000", "-ac", "1", new_file_path])
-        
-    #     with open(new_file_path, 'rb')  as f:
-    #         y, rb = torchaudio.load(f)
-            
-    #     print("File is loaded!")        
-        
-        
-    #     ars = self.pipeline(y[0].numpy(), generate_kwargs=self.kwargs, return_timestamps=False)
-        
-    #     return ars['text']
     
     def bytes_to_text(self, audio_bytes : bytes):
         
@@ -99,14 +83,6 @@ class WhisperRussian():
         
         return result
         
-        
-
-# path = 'E:\\PProject\\tests\\audio1.wav' #'E:\\PProject\\tests\\test1.wav'    
-# whisp = WhisperRussian()
-
-# with open(path, 'rb') as f:
-#     data_bytes = f.read()
-
 # #ans = whisp.file_to_text(path)
 # ans = whisp.bytes_to_text(data_bytes)
 
